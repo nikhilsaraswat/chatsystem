@@ -23,7 +23,8 @@
         function sendMessage() {
             var message = document.getElementById('message').value;
             axios.post('/send-message', {
-                message: message
+                message: message,
+                key: "12345",
             })
             .then(function (response) {
                 console.log(response.data);
